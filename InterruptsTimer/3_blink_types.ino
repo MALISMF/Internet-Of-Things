@@ -23,8 +23,8 @@ void setup() {
   // Настройка Timer2 для прерывания (всегда работает)
   setupTimer2Interrupt();
   
-  Serial.println("Программа с тремя видами blink запущена");
-  Serial.println("Команды: '1'=millis режим, '2'=delay режим, '0'=только прерывание");
+  Serial.println("Три вида blink");
+  Serial.println("Команды: '1'=millis() режим, '2'=delay() режим, '0'=только прерывание");
   Serial.println("Прерывание всегда работает на пине 13, остальные режимы на пине 12");
 }
 
