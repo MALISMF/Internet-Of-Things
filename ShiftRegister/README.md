@@ -1,3 +1,7 @@
+# Ссылки
+Видео-демонстрация: https://drive.google.com/file/d/1f8JPrFeF1kO-LkTTy59a32HHUL7STxsj/view?usp=sharing
+Tinkercad: https://www.tinkercad.com/things/hCuHkdmImrT-shift-register?sharecode=g0gxX4NrjS3CHJBhsTppLYzR5KT9s2A60g9MDbBVKJs
+
 # Управление семисегментным индикатором через каскадное соединение сдвиговых регистров
 
 Данное решение реализует секундный счетчик (от 00 до 59) с выводом на два семисегментных индикатора через каскад из двух сдвиговых регистров 74HC595.
