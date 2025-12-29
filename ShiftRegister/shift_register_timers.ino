@@ -1,7 +1,3 @@
-const int dataPin = 10;  
-const int clockPin = 11;  
-const int latchPin = 12;  
-
 const bool COMMON_CATHODE = true; 
 
 bool digits[10][8] = {
@@ -33,20 +29,27 @@ void updateDisplay() {
         bitValue = !bitValue;
       }
 
+      // dataPin (PB2, pin 10)
       if (bitValue) PORTB |= (1 << 2);
       else PORTB &= ~(1 << 2);
     
+      // clockPin (PB3, pin 11) - импульс
       PORTB |= (1 << 3);
       PORTB &= ~(1 << 3);
     }
   }
 
+  // latchPin (PB4, pin 12) - импульс
   PORTB |= (1 << 4);
   PORTB &= ~(1 << 4);
 }
 
 void setup() {
+  // Инициализация пинов как выходы (PB2, PB3, PB4 соответствуют пинам 10, 11, 12)
   DDRB |= (1 << 2) | (1 << 3) | (1 << 4);
+  
+  // Установка начального состояния пинов в LOW
+  PORTB &= ~((1 << 2) | (1 << 3) | (1 << 4));
   
   Serial.begin(9600);
 
